@@ -17,47 +17,6 @@ html {
     height: 100px;
 }
 
-@media (max-width: 375px) {
-    .hover{
-        font-size: 1rem;
-    }
-  }
-
-@media  (min-width: 400px) and (max-width: 1300px) {
-
-    header{
-        justify-content: center;
-    }
-    .logo{
-        width: 75px;
-        height: 75px;
-    }
-    nav{
-        flex-direction: row;
-    }
-
-    #sobre-mi {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        place-items: center;
-    }
-
-    .proyectos {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-    .Social{
-        max-width:350px;
-        max-height: 300px;
-        place-items: start;
-    }
-    .descripcion{
-        max-width: 415px;
-    }
-}
-
 
 
 body.dark-mode {
@@ -76,10 +35,12 @@ body.dark-mode {
     .oscuro:hover {
         stroke: blue;
     }
+
     .hover {
         color: white;
     }
-    .header{
+
+    .header {
         background-color: black;
     }
 }
@@ -95,22 +56,20 @@ body.dark-mode {
 }
 
 header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 20% 80%;
     align-items: center;
     background-color: white;
-    flex-direction: row;
-    height: 120px;
     border-bottom: 2px solid grey;
-    padding: 10px;
 }
 
 nav {
-    width: 100%;
-    height: 120px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 15% 15% 15%;
+    justify-content: end;
+    justify-items: center;
     align-items: center;
-    justify-content: flex-end;
-    column-gap: 20px;
+    height: 120px;
 }
 
 nav a {
@@ -118,7 +77,7 @@ nav a {
     color: rgb(80, 80, 80);
     font-weight: bold;
     text-decoration: none;
-    padding: 10px 10px;
+    padding: 12px 12px;
     border-radius: 30px;
     border: 2px solid #fafafa10;
     box-shadow: 0px 0px 8px;
@@ -144,7 +103,7 @@ h1 {
     color: black;
     font-size: 2rem;
     font-family: 'Chivo', sans-serif;
-    margin: 0px 0 20px 0;
+    margin-bottom: 16px;
 
     & .soy {
         font-weight: lighter;
@@ -176,18 +135,17 @@ h1 {
     background-clip: text;
     -webkit-background-clip: text;
     font-weight: bold;
-    font-size: 45px;
+    font-size: inherit;
 }
 
 h4 {
-    display: block;
     font-size: 45px;
     white-space: nowrap;
     overflow: hidden;
     width: 25ch;
     animation: typing 2.5s steps(25) 1 forwards, blink .5s infinite step-end alternate;
     border-right: 3px solid blue;
-    margin: 20px 0 20px 30px;
+    margin-bottom: 20px;
 }
 
 @keyframes typing {
@@ -313,7 +271,6 @@ h3 {
     width: 500px;
     height: 400px;
     border-image: linear-gradient(to right, rgba(95, 0, 139, 0.8), rgba(0, 0, 139, 0.8)) 1;
-    /*background: linear-gradient(to right, rgba(95, 0, 139, 0.8), rgba(0, 0, 139, 0.8));*/
     border-radius: 16px;
     border: 3px solid #fafafa2f;
 
@@ -375,4 +332,120 @@ h3 {
 .icon-tabler-send:hover {
     transform: scale(1.2);
     transition: 0.5s;
+}
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 415px) {
+
+    header {
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-auto-flow: column;
+        gap: 14px;
+    }
+
+    #sobre-mi {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-auto-flow: row;
+        max-width: max-content;
+    }
+
+    .descripcion {
+        max-width: 375px;
+        text-wrap: balance;
+        padding: 16px;
+
+        & .descripcion-titulo h4 {
+            font-size: 28px;
+            width: 25ch;
+        }
+
+        & .descripcion-titulo h1 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        & .descripcion-texto h1 {
+            font-size: 1.3rem;
+        }
+
+        & .sobre-mi-texto {
+            font-size: 0.8rem;
+        }
+    }
+
+    .Social {
+        width: 300px;
+        height: 250px;
+    }
+
+    .proyectos {
+        flex-direction: column;
+    }
+
+    .linkedin-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .github-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .icon-tabler-download {
+        width: 30px;
+        height: 30px;
+    }
+
+    .icon-tabler-mail {
+        width: 30px;
+        height: 30px;
+    }
+
+    .Contacto {
+        justify-content: center;
+    }
+
+    .card {
+        margin-top: 30px;
+        width: 375px;
+        height: 380px;
+
+        & .titulo{
+            margin-left: 10px;
+        }
+        & .descripcion-xeix {
+            margin-left: 10px;
+            display: inline-block;
+            text-wrap: wrap;
+        }
+
+        .icon-tabler-brand-html5 {
+            width: 30px;
+            height: 30px;
+        }
+
+        .icon-tabler-brand-css3 {
+            width: 30px;
+            height: 30px;
+        }
+
+        .icon-tabler-brand-github {
+            width: 30px;
+            height: 30px;
+        }
+
+        .icon-tabler-send {
+            width: 30px;
+            height: 30px;
+        }
+    }
 }
