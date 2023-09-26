@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portolio Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./Imágenes/Mi Logo.png" type="image/x-icon">
+</head>
+
+<body class="dark-mode">
+    <header class="dark-mode header">
+        <img src="./Imágenes/Logo.png" alt="logo" class="logo">
+        <nav>
+            <a class="hover" href="#sobre-mi">Sobre mí</a>
+            <a class="hover" href="#proyectos">Proyectos</a>
+            <button id="darkModeButton" class="boton">Modo Claro</button>
+        </nav>
+    </header>
+    <section class="sobre-mi" id="sobre-mi">
+        <article class="descripcion">
+            <div class="descripcion-titulo">
+                <h1 class="oscuro"><span class="soy">Soy</span> Erik</h1>
+                <h4 class="oscuro">Desarrollador Web <span class="degradado">Frontend</span></h4>
+            </div>
+            <div class="descripcion-texto">
+                <h1 class="oscuro">Sobre mí</h1>
+                <p class="sobre-mi-texto">Me considero una persona autodidacta y mi interés principal es
+                    especializarme más en el Frontend y empezar en el Backend para
+                    un futuro ser <span class="full-stack">desarrollador full stack.</span>
+                </p>
+            </div>
+            <div class="Contacto">
+                <a href="https://github.com/Eriksk02" target="_blank" class="github-button">
+                    <svg class="github-icon oscuro" stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
+                        stroke="currentColor" fill="none" viewBox="0 0 24 24" focusable="false">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/erik-ivanovas/" target="_blank" class="linkedin-button">
+                    <svg class="linkedin-icon oscuro" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z">
+                        </path>
+                        <path d="M8 11l0 5"></path>
+                        <path d="M8 8l0 .01"></path>
+                        <path d="M12 16l0 -5"></path>
+                        <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+                    </svg>
+                </a>
+                <a href="./CV/CV Tenerife .pdf" target="_blank">
+                    <svg class="icon-tabler-download oscuro" width="40" height="40" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="black" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+                        <path d="M7 11l5 5l5 -5"></path>
+                        <path d="M12 4l0 12"></path>
+                    </svg>
+                </a>
+                <a class="email-button" onclick="copyToClipboard('erikivanovas@gmail.com')">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-mail " width="40" height="40"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z">
+                        </path>
+                        <path d="M3 7l9 6l9 -6"></path>
+                    </svg>
+                </a>
+            </div>
+        </article>
+        <article class="Social">
+            <!--Foto Mia-->
+        </article>
+    </section>
+    <h3>Proyectos</h3>
+    <section class="proyectos" id="proyectos">
+        <div class="card">
+            <img src="./Imágenes/Card-Web-Xeix.png" alt="xeix" class="xeix">
+            <p class="titulo oscuro">Xeix</p>
+            <span class="descripcion-xeix oscuro">Página web de Xeix, nuestro clan de Call Of Duty Mobile</span>
+            <div class="direccion">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-brand-html5" width="40" height="40"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="orange" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+                    <path d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-brand-css3" width="40" height="40"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="blue" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+                    <path d="M8.5 8h7l-4.5 4h4l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"></path>
+                </svg>
+                <a href="https://github.com/Eriksk02" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-brand-github oscuro" width="40"
+                        height="40" viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                            d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://github.com/Eriksk02" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-send oscuro" width="40" height="40"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M10 14l11 -11"></path>
+                        <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./Imágenes/Card-Web-Xeix.png" alt="xeix" class="xeix">
+            <p class="titulo oscuro">Xeix</p>
+            <span class="descripcion-xeix oscuro">Página web de Xeix, nuestro clan de Call Of Duty Mobile</span>
+            <div class="direccion">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-brand-html5" width="40" height="40"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="orange" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+                    <path d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-brand-css3" width="40" height="40"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="blue" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+                    <path d="M8.5 8h7l-4.5 4h4l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"></path>
+                </svg>
+                <a href="https://github.com/Eriksk02" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-brand-github oscuro" width="40"
+                        height="40" viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                            d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://github.com/Eriksk02" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-send oscuro" width="40" height="40"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M10 14l11 -11"></path>
+                        <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./Imágenes/Card-Web-Xeix.png" alt="xeix" class="xeix">
+            <p class="titulo oscuro">Xeix</p>
+            <span class="descripcion-xeix oscuro">Página web de Xeix, nuestro clan de Call Of Duty Mobile</span>
+            <div class="direccion">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-brand-html5" width="40" height="40"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="orange" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+                    <path d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-brand-css3" width="40" height="40"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="blue" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+                    <path d="M8.5 8h7l-4.5 4h4l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"></path>
+                </svg>
+                <a href="https://github.com/Eriksk02" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-brand-github oscuro" width="40"
+                        height="40" viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                            d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://github.com/Eriksk02" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-send oscuro" width="40" height="40"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M10 14l11 -11"></path>
+                        <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+
+    </section>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
+<script>
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text);
+        alert('El contenido se ha copiado al portapapeles.');
+    }
+
+    const darkModeButton = document.getElementById('darkModeButton');
+    const body = document.body;
+
+    if (darkModeButton) {
+        darkModeButton.addEventListener('click', function () {
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                darkModeButton.textContent = 'Modo Oscuro';
+            } else {
+                body.classList.add('dark-mode');
+                darkModeButton.textContent = 'Modo Claro';
+            }
+        });
+    }
+</script>
