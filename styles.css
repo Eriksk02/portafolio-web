@@ -340,6 +340,10 @@ h3 {
 
 @media (min-width: 360px) and (max-width: 415px) {
 
+    body{
+        max-width: 100%;
+    }
+
     header {
         justify-items: center;
         grid-template-columns: 1fr;
@@ -354,11 +358,11 @@ h3 {
     #sobre-mi {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         grid-auto-flow: row;
-        max-width: max-content;
+        max-width: 100%;
     }
 
     .descripcion {
-        max-width: 375px;
+        max-width: 100%;
         text-wrap: balance;
         padding: 16px;
 
@@ -388,6 +392,7 @@ h3 {
 
     .proyectos {
         flex-direction: column;
+        max-width: 100%;
     }
 
     .linkedin-icon {
