@@ -16,7 +16,7 @@ body {
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 
 header {
@@ -143,9 +143,12 @@ h1 {
     background-image: linear-gradient(to top, rgba(95, 0, 139, 0.35), rgba(0, 0, 139, 0.35)), url(./Imágenes/Yo-fondo-negro.png);
     background-position: bottom;
     background-size: cover;
-    border-radius: 5%;
+    border-radius: 20px;
     margin-top: 20px;
     box-shadow: 3px 8px 10px rgba(1, 0, 82, 0.5), 3px 8px 10px rgba(95, 0, 139, 0.5);
+    @media (width: 430px){
+        margin: 0 auto;
+    }
 }
 
 #proyectos {
@@ -170,7 +173,6 @@ h1 {
     & .descripcion-carta {
         padding: 10px;
         height: 100px;
-        margin-bottom: 20px;
     }
 
     & h4.titulo {
@@ -182,13 +184,9 @@ h1 {
         font-weight: lighter;
         margin-top: 10px;
     }
-    @media (width: 375px){
-        height: 375px;
-    }
-    @media (width: 425px){
+    @media (min-width: 375px) and (max-width: 500px){
         height: 400px;
     }
-
 
 }
 
