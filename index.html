@@ -1,82 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio web 3.0</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./Imágenes/Logo.png" type="image/x-icon">
+
 </head>
 
 <body>
     <header>
         <img src="./Imágenes/Logo.png" alt="logo" class="logo">
         <nav>
-            <a href="#">Sobre mí</a>
-            <a href="#">Proyectos</a>
+            <a href="#sobremi">Sobre mí</a>
+            <a href="#proyectos">Proyectos</a>
         </nav>
     </header>
-    <section>
+    <section id="sobremi">
         <article>
-            <div class="descripcion">
-                <h3>Soy Erik</h3>
-                <h1>Desarrollador Web <span class="degradado">Frontend</span></h1>
+            <div class="capsula">
+                <div class="descripcion">
+                    <h3>Soy Erik</h3>
+                    <h1>Desarrollador Web <span class="degradado">Frontend</span></h1>
+                </div>
+                <div class="descripcion-texto">
+                    <h3>Sobre mí</h3>
+                    <p>Me considero una persona <b>autodidacta</b> y mi interés principal es
+                        especializarme más en el Frontend y empezar en el Backend para
+                        un futuro ser <b>desarrollador full stack</b></p>
+                </div>
+                <div class="contacto">
+                    <a href="https://github.com/Eriksk02" target="_blank" class="github-button">
+                        <svg class="github-icon" stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
+                            stroke="currentColor" fill="none" viewBox="0 0 24 24" focusable="false">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/erik-ivanovas/" target="_blank" class="linkedin-button">
+                        <svg class="linkedin-icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z">
+                            </path>
+                            <path d="M8 11l0 5"></path>
+                            <path d="M8 8l0 .01"></path>
+                            <path d="M12 16l0 -5"></path>
+                            <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+                        </svg>
+                    </a>
+                    <a href="./CV/CV Erik.pdf" target="_blank">
+                        <svg class="icon-tabler-download" width="40" height="40" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="black" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+                            <path d="M7 11l5 5l5 -5"></path>
+                            <path d="M12 4l0 12"></path>
+                        </svg>
+                    </a>
+                    <a class="email-button" onclick="copyToClipboard('erikivanovas@gmail.com')">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-mail " width="40" height="40"
+                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z">
+                            </path>
+                            <path d="M3 7l9 6l9 -6"></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
-            <div class="descripcion-texto">
-                <h3>Sobre mí</h3>
-                <p>Me considero una persona autodidacta y mi interés principal es
-                    especializarme más en el Frontend y empezar en el Backend para
-                    un futuro ser desarrollador full stack</p>
-            </div>
-            <div class="contacto">
-                <a href="https://github.com/Eriksk02" target="_blank" class="github-button">
-                    <svg class="github-icon oscuro" stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
-                        stroke="currentColor" fill="none" viewBox="0 0 24 24" focusable="false">
-                        <path
-                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                        </path>
-                    </svg>
-                </a>
-                <a href="https://www.linkedin.com/in/erik-ivanovas/" target="_blank" class="linkedin-button">
-                    <svg class="linkedin-icon oscuro" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z">
-                        </path>
-                        <path d="M8 11l0 5"></path>
-                        <path d="M8 8l0 .01"></path>
-                        <path d="M12 16l0 -5"></path>
-                        <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
-                    </svg>
-                </a>
-                <a href="./CV/CV Erik.pdf" target="_blank">
-                    <svg class="icon-tabler-download oscuro" width="40" height="40" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="black" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
-                        <path d="M7 11l5 5l5 -5"></path>
-                        <path d="M12 4l0 12"></path>
-                    </svg>
-                </a>
-                <a class="email-button" onclick="copyToClipboard('erikivanovas@gmail.com')">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-mail " width="40" height="40"
-                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z">
-                        </path>
-                        <path d="M3 7l9 6l9 -6"></path>
-                    </svg>
-                </a>
-            </div>
+
             <div class="mi-imagen"></div>
         </article>
     </section>
     <section id="proyectos" class="proyectos">
         <div class="card">
-            <img src="./Imágenes/Card-Web-Xeix.png" alt="xeix" class="imagen-xeix">
+            <div class="imagen-card">
+                <img src="./Imágenes/Card-Web-Xeix.png" alt="xeix" class="imagen-xeix">
+            </div>
             <div class="descripcion-carta">
                 <h4 class="titulo">Xeix</h4>
-                    <p class="descripcion-xeix">Página web de Xeix, nuestro clan de Call Of Duty Mobile <p/>
+                <p class="descripcion-xeix">Página web de Xeix, nuestro clan de Call Of Duty Mobile</p>
             </div>
             <div class="direccion">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-brand-html5" width="40" height="40"
@@ -118,7 +126,8 @@
             <img src="./Imágenes/clon pinterest.webp" alt="xeix" class="imagen-xeix">
             <div class="descripcion-carta">
                 <h4 class="titulo">Pinterest</h4>
-                    <p class="descripcion-xeix">Clon de Pinterest hecho con HTML y Tailwind<p/>
+                <p class="descripcion-xeix">Clon de Pinterest hecho con HTML y Tailwind
+                    <p />
             </div>
             <div class="direccion">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-brand-html5" width="40" height="40"
@@ -128,10 +137,14 @@
                     <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
                     <path d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"></path>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tailwind" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tailwind" width="40"
+                    height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M11.667 6c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 2 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968zm-4 6.5c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 1.975 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968z"></path>
-                 </svg>
+                    <path
+                        d="M11.667 6c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 2 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968zm-4 6.5c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 1.975 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968z">
+                    </path>
+                </svg>
                 <a href="https://github.com/Eriksk02" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-brand-github oscuro" width="40"
                         height="40" viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none"
