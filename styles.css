@@ -159,6 +159,7 @@ h1 {
     border-image: linear-gradient(to right, rgba(95, 0, 139, 0.8), rgba(0, 0, 139, 0.8)) 1;
     border-radius: 16px;
     border: 2px solid black;
+    margin-bottom: 20px;
     /*border: 3px solid #fafafa2f;*/
 
     & .imagen-xeix {
@@ -201,7 +202,11 @@ h1 {
 .icon-tabler-brand-html5:hover,
 .icon-tabler-brand-css3:hover,
 .icon-tabler-brand-github:hover,
+.icon-tabler-brand-tailwind:hover,
 .icon-tabler-send:hover {
     transform: scale(var(--escala));
     transition: var(--transition);
+}
+.icon-tabler-brand-tailwind:hover{
+    stroke: rgb(79, 185, 255);
 }
