@@ -4,148 +4,79 @@
     box-sizing: border-box;
 }
 
+:root {
+    --escala: 1.2;
+    --transition: 0.5s;
+    --stroke: blue;
+}
+
+body {
+    max-width: 100%;
+    padding: 10px;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Chivo&family=Fraunces:opsz,wght@9..144,300&family=Montserrat:wght@200&family=Outfit&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chivo&family=Fraunces:opsz,wght@9..144,300&family=Montserrat:wght@200&family=Outfit&family=Poppins:wght@300&display=swap');
-
-/*Logo*/
-.logo {
-    width: 100px;
-    height: 100px;
-}
-
-
-
-body.dark-mode {
-    background-color: black;
-    color: white;
-
-    .sobre-mi-texto {
-        color: white;
-    }
-
-    .oscuro {
-        color: white;
-        stroke: white;
-    }
-
-    .oscuro:hover {
-        stroke: blue;
-    }
-
-    .hover {
-        color: white;
-    }
-
-    .header {
-        background-color: black;
-    }
-}
-
-#darkModeButton {
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 10px 10px;
-    background-color: white;
-    border-radius: 30px;
-    border: 2px solid #fafafa10;
-    box-shadow: 0px 0px 8px;
-}
-
 header {
-    display: grid;
-    grid-template-columns: 20% 80%;
+    display: flex;
     align-items: center;
-    background-color: white;
-    border-bottom: 2px solid grey;
+    justify-content: space-around;
+
+    & .logo {
+        width: 100px;
+        height: 100px;
+    }
+    @media (width: 320px){
+        .logo{
+            width: 75px;
+            height: 75px;
+        }
+    }
+
+    & nav {
+        display: flex;
+        gap: 20px;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & nav a {
+        border: 2px solid black;
+        padding: 10px 10px;
+        border-radius: 40px;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+    & nav a:hover {
+        transition: 0.5s;
+        background-color: rgb(200, 200, 200);
+    }
 }
 
-nav {
-    display: grid;
-    grid-template-columns: 15% 15% 15%;
-    justify-content: end;
-    justify-items: center;
-    align-items: center;
-    height: 120px;
-}
+.descripcion {
+    padding: 0px 10px;
 
-nav a {
-    font-size: 1rem;
-    color: rgb(80, 80, 80);
-    font-weight: bold;
-    text-decoration: none;
-    padding: 12px 12px;
-    border-radius: 30px;
-    border: 2px solid #fafafa10;
-    box-shadow: 0px 0px 8px;
-}
+    &.descripcion h3 {
+        font-weight: lighter;
+        margin-bottom: 10px;
+    }
 
-.hover:hover {
-    color: black;
-    font-size: 1.2rem;
-    transition: 0.5s;
-}
-
-.sobre-mi {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    border-bottom: 1px solid grey;
-    height: 100vh;
-
+    &.descripcion h1 {
+        font-size: 1.3rem;
+    }
 }
 
 h1 {
-    color: black;
-    font-size: 2rem;
-    font-family: 'Chivo', sans-serif;
-    margin-bottom: 16px;
-
-    & .soy {
-        font-weight: lighter;
-    }
-}
-
-
-.descripcion-texto {
-    width: 600px;
-
-    & .sobre-mi-texto {
-        max-width: 75%;
-        margin-top: 20px;
-        color: black;
-        line-height: 1.4;
-        font-size: 1.2rem;
-        font-family: 'Poppins', sans-serif;
-
-        & .full-stack {
-            font-weight: bold;
-        }
-    }
-}
-
-/*Degradado Texto Frontend*/
-.degradado {
-    background: linear-gradient(rgb(72, 0, 105), rgb(0, 17, 255));
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    font-weight: bold;
-    font-size: inherit;
-}
-
-h4 {
-    font-size: 45px;
     white-space: nowrap;
     overflow: hidden;
     width: 25ch;
     animation: typing 2.5s steps(25) 1 forwards, blink .5s infinite step-end alternate;
     border-right: 3px solid blue;
-    margin-bottom: 20px;
 }
 
 @keyframes typing {
@@ -160,32 +91,31 @@ h4 {
     }
 }
 
-.Contacto {
+.degradado {
+    background: linear-gradient(rgb(72, 0, 105), rgb(0, 17, 255));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.descripcion-texto {
+    padding: 10px 10px;
+
+    &.descripcion-texto p {
+        margin-top: 10px;
+    }
+}
+
+/*Iconos Sociales*/
+
+.contacto {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 30px;
-    margin-top: 30px;
+    margin: 10px;
 }
 
-/*Iconos Sociales Github*/
-
-.github-icon {
-    width: 40px;
-    height: 40px;
-    transition: stroke 0.5s ease-out;
-    stroke: black;
-}
-
-.github-icon:hover {
-    stroke: blue;
-    transform: scale(1.2);
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-/*Iconos Sociales Linkedin*/
-
+.github-icon,
 .linkedin-icon {
     width: 40px;
     height: 40px;
@@ -193,379 +123,85 @@ h4 {
     stroke: black;
 }
 
-.linkedin-icon:hover {
-    stroke: blue;
-    transform: scale(1.2);
-    transition: 0.5s;
+/*Iconos Sociales Hover*/
+
+.github-icon:hover,
+.linkedin-icon:hover,
+.icon-tabler-download:hover,
+.icon-tabler-mail:hover {
+    stroke: var(--stroke);
+    transform: scale(var(--escala));
+    transition: var(--transition);
     cursor: pointer;
 }
 
-/*CV*/
-.icon-tabler-download:hover {
-    stroke: blue;
-    transform: scale(1.2);
-    transition: 0.5s;
-}
 
-/*Gmail*/
-.icon-tabler-mail:hover {
-    stroke: blue;
-    transform: scale(1.2);
-    transition: 0.5s;
-}
-
-/*Foto Mia*/
-.Social {
-    width: 500px;
-    height: 450px;
+/*Mi Foto*/
+.mi-imagen {
+    width: 100%;
+    height: 250px;
     background-image: linear-gradient(to top, rgba(95, 0, 139, 0.35), rgba(0, 0, 139, 0.35)), url(./Imágenes/Yo-fondo-negro.png);
     background-position: bottom;
     background-size: cover;
-    margin: 20px 0px 40px 0px;
     border-radius: 5%;
+    margin-top: 20px;
     box-shadow: 3px 8px 10px rgba(1, 0, 82, 0.5), 3px 8px 10px rgba(95, 0, 139, 0.5);
 }
 
-.proyectos {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 50px;
-    gap: 20px;
+#proyectos {
+    margin-top: 30px;
 }
 
-h3 {
-    font-family: 'Chivo', sans-serif;
-    font-size: 2.5rem;
-    text-align: center;
-    margin-top: 20px;
-}
-
-/*Personalizar barra de scroll*/
-::-webkit-scrollbar {
-    width: 8px;
-    /* Ancho del scroll */
-}
-
-::-webkit-scrollbar-track {
-    background-color: black;
-    /* Color del fondo del scroll */
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgb(17, 0, 255);
-    /* Color del scroll */
-}
-
-/*Tarjetas proyectos*/
-@keyframes movimiento {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    100% {
-        background-position: 100% 50%;
-    }
-}
-
+/*Cartas Proyectos*/
 .card {
-    width: 500px;
-    height: 400px;
+    width: 100%;
+    height: 350px;
     border-image: linear-gradient(to right, rgba(95, 0, 139, 0.8), rgba(0, 0, 139, 0.8)) 1;
     border-radius: 16px;
-    border: 3px solid #fafafa2f;
+    border: 2px solid black;
+    /*border: 3px solid #fafafa2f;*/
 
-    & .xeix {
+    & .imagen-xeix {
         width: 100%;
+        border-radius: 14px 14px 7px 7px;
+    }
+
+    & .descripcion-carta {
         padding: 10px;
-        border-radius: 16px;
+        height: 100px;
+        margin-bottom: 20px;
     }
 
-    .xeix:hover {
-        transition: 0.5s;
-        transform: skewX(3deg);
-    }
-
-    & .titulo {
-        color: black;
-        text-align: start;
+    & h4.titulo {
         font-weight: bold;
-        padding-left: 10px;
-        font-size: 1.4rem;
-        margin-bottom: 16px;
+        font-size: 1.5rem;
     }
 
     & .descripcion-xeix {
-        color: black;
-        padding-left: 10px;
+        font-weight: lighter;
+        margin-top: 10px;
     }
-}
+    @media (width: 375px){
+        height: 375px;
+    }
+    @media (width: 425px){
+        height: 400px;
+    }
 
-.card:hover {
-    box-shadow: 3px 5px 16px rgb(2, 0, 82), 3px 5px 16px rgba(95, 0, 139);
-    transition: 1s;
+
 }
 
 /*Tarjetas dirección*/
 .direccion {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 20px;
-    margin-top: 20px;
 }
 
-.icon-tabler-brand-html5:hover {
-    transform: scale(1.2);
-    transition: 0.5s;
-}
-
-.icon-tabler-brand-css3:hover {
-    transform: scale(1.2);
-    transition: 0.5s;
-}
-
-.icon-tabler-brand-github:hover {
-    transform: scale(1.2);
-    transition: 0.5s;
-}
-
+.icon-tabler-brand-html5:hover,
+.icon-tabler-brand-css3:hover,
+.icon-tabler-brand-github:hover,
 .icon-tabler-send:hover {
-    transform: scale(1.2);
-    transition: 0.5s;
-}
-
-
-
-
-
-@media (min-width: 360px) and (max-width: 415px) {
-
-    body{
-        max-width: 100%;
-    }
-
-    header {
-        justify-items: center;
-        grid-template-columns: 1fr;
-    }
-
-    nav {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-        grid-auto-flow: column;
-        gap: 14px;
-    }
-
-    #sobre-mi {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        grid-auto-flow: row;
-        max-width: 100%;
-    }
-
-    .descripcion {
-        max-width: 100%;
-        text-wrap: balance;
-        padding: 16px;
-
-        & .descripcion-titulo h4 {
-            font-size: 28px;
-            width: 25ch;
-        }
-
-        & .descripcion-titulo h1 {
-            font-size: 1.5rem;
-            margin-top: 20px;
-        }
-
-        & .descripcion-texto h1 {
-            font-size: 1.3rem;
-        }
-
-        & .sobre-mi-texto {
-            font-size: 0.8rem;
-        }
-    }
-
-    .Social {
-        width: 300px;
-        height: 250px;
-    }
-
-    .proyectos {
-        flex-direction: column;
-        max-width: 100%;
-    }
-
-    .linkedin-icon {
-        width: 30px;
-        height: 30px;
-    }
-
-    .github-icon {
-        width: 30px;
-        height: 30px;
-    }
-
-    .icon-tabler-download {
-        width: 30px;
-        height: 30px;
-    }
-
-    .icon-tabler-mail {
-        width: 30px;
-        height: 30px;
-    }
-
-    .Contacto {
-        justify-content: center;
-    }
-
-    .card {
-        margin-top: 30px;
-        width: 375px;
-        height: 380px;
-
-        & .titulo{
-            margin-left: 10px;
-        }
-        & .descripcion-xeix {
-            margin-left: 10px;
-            display: inline-block;
-            text-wrap: wrap;
-        }
-
-        .icon-tabler-brand-html5 {
-            width: 30px;
-            height: 30px;
-        }
-
-        .icon-tabler-brand-css3 {
-            width: 30px;
-            height: 30px;
-        }
-
-        .icon-tabler-brand-github {
-            width: 30px;
-            height: 30px;
-        }
-
-        .icon-tabler-send {
-            width: 30px;
-            height: 30px;
-        }
-    }
-}
-@media (min-width: 416px) and (max-width: 500px) {
-body{
-    width: 600px;
-}
-
-    header {
-        justify-items: center;
-        grid-template-columns: 1fr;
-    }
-
-    nav {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-        grid-auto-flow: column;
-        gap: 14px;
-    }
-
-    #sobre-mi {
-        grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
-        grid-auto-flow: row;
-        max-width: max-content;
-    }
-    .descripcion {
-        max-width: 375px;
-        text-wrap: balance;
-        padding: 16px;
-
-        & .descripcion-titulo h4 {
-            font-size: 28px;
-            width: 25ch;
-        }
-
-        & .descripcion-titulo h1 {
-            font-size: 1.5rem;
-            margin-top: 20px;
-        }
-
-        & .descripcion-texto h1 {
-            font-size: 1.3rem;
-        }
-
-        & .sobre-mi-texto {
-            font-size: 0.8rem;
-        }
-    }
-
-    .Social {
-        width: 300px;
-        height: 250px;
-    }
-
-    .proyectos {
-        flex-direction: column;
-        max-width: max-content;
-    }
-
-    .linkedin-icon {
-        width: 30px;
-        height: 30px;
-    }
-
-    .github-icon {
-        width: 30px;
-        height: 30px;
-    }
-
-    .icon-tabler-download {
-        width: 30px;
-        height: 30px;
-    }
-
-    .icon-tabler-mail {
-        width: 30px;
-        height: 30px;
-    }
-
-    .Contacto {
-        justify-content: center;
-    }
-
-    .card {
-        margin-top: 30px;
-        width: 375px;
-        height: 380px;
-        max-width: max-content;
-
-        & .titulo{
-            margin-left: 10px;
-        }
-        & .descripcion-xeix {
-            margin-left: 10px;
-            display: inline-block;
-            text-wrap: wrap;
-        }
-
-        .icon-tabler-brand-html5 {
-            width: 30px;
-            height: 30px;
-        }
-
-        .icon-tabler-brand-css3 {
-            width: 30px;
-            height: 30px;
-        }
-
-        .icon-tabler-brand-github {
-            width: 30px;
-            height: 30px;
-        }
-
-        .icon-tabler-send {
-            width: 30px;
-            height: 30px;
-        }
-    }
+    transform: scale(var(--escala));
+    transition: var(--transition);
 }
