@@ -9,13 +9,12 @@
     <link rel="shortcut icon" href="./Imágenes/Logo.png" type="image/x-icon">
 
 </head>
-
 <body>
     <header>
         <img src="./Imágenes/Logo.png" alt="logo" class="logo">
         <nav>
             <a href="#sobremi">Sobre mí</a>
-            <a href="#proyectos">Proyectos</a>
+            <a href="#proyectos">Proyectos</a>         
         </nav>
     </header>
     <section id="sobremi">
@@ -123,7 +122,9 @@
             </div>
         </div>
         <div class="card">
+            <div class="imagen-card">
             <img src="./Imágenes/clon pinterest.webp" alt="xeix" class="imagen-xeix">
+            </div>
             <div class="descripcion-carta">
                 <h4 class="titulo">Pinterest</h4>
                 <p class="descripcion-xeix">Clon hecho con HTML y Tailwind (proximamente)</p>
@@ -166,7 +167,9 @@
             </div>
         </div>
         <div class="card">
+            <div class="imagen-card">
             <img src="./Imágenes/api-tiempo-ejemplo-480x295.webp" alt="xeix" class="imagen-xeix">
+            </div>
             <div class="descripcion-carta">
                 <h4 class="titulo">App del tiempo</h4>
                 <p class="descripcion-xeix">Api del tiempo (proximamente)</p>
@@ -210,5 +213,11 @@
         </div>
     </section>
 </body>
+<script>
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text);
+        alert('El contenido se ha copiado al portapapeles.');
+    }
+</script>
 
 </html>
