@@ -175,7 +175,7 @@ h1 {
     max-width: 320px;
     height: 200px;
     max-height: 220px;
-    background-image: linear-gradient(to top, rgba(95, 0, 139, 0.35), rgba(0, 0, 139, 0.35)), url(./Imágenes/Yo-fondo-negro.png);
+    background-image: linear-gradient(to top, rgba(95, 0, 139, 0.35), rgba(0, 0, 139, 0.35)), url(./Imágenes/Yo-fondo-negro.webp);
     background-position: bottom;
     background-size: cover;
     border-radius: 20px;
